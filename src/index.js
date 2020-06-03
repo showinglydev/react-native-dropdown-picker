@@ -241,9 +241,9 @@ class DropDownPicker extends React.Component {
                             <View style={[this.props.arrowStyle, {opacity}]}>
                             {
                                 ! this.state.isVisible ? (
-                                    this.props.customArrowDown(this.props.arrowSize, this.props.arrowColor)
+                                    this.props.customArrowDown
                                 ) : (
-                                    this.props.customArrowUp(this.props.arrowSize, this.props.arrowColor)
+                                    this.props.customArrowUp
                                 )
                             }
                             </View>
@@ -336,8 +336,8 @@ DropDownPicker.defaultProps = {
     arrowColor: '#000',
     showArrow: true,
     arrowSize: 15,
-    customArrowUp: (size, color) => <Feather name="chevron-up" size={size} color={color} />,
-    customArrowDown: (size, color) => <Feather name="chevron-down" size={size} color={color} />,
+    customArrowUp: <Feather name="chevron-up" size={20} color={'black'} />,
+    customArrowDown: <Feather name="chevron-down" size={20} color={'black'} />,
     customTickIcon: () => <Feather name="check" size={15} />,
     zIndex: 5000,
     disabled: false,
